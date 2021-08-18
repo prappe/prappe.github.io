@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:700,700italic");
+html {
+  overflow: auto;
+}
+html::-webkit-scrollbar {
+  width: 0.4vmax;
+}
+html::-webkit-scrollbar-track {
+  background-color: #111111;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 0.4vmax;
+  background: #490c37;
+}
+
+.bg {
+  width: 300vw;
+  height: 300vh;
+  background-color: #1f0f34;
+  background-repeat: repeat-y;
+  background-position: 0vw 0vh,5vw 1.7vh,10vw 3.4vh,15vw 5.1vh,20vw 6.8vh,25vw 8.5vh,30vw 10.2vh,35vw 11.9vh,40vw 13.6vh,45vw 15.3vh,50vw 17vh,55vw 18.7vh,60vw 20.4vh,65vw 22.1vh,70vw 23.8vh,75vw 25.5vh,80vw 27.2vh,85vw 28.9vh,90vw 30.6vh,95vw 32.3vh,100vw 34vh;
+  background-image: radial-gradient(circle, #490c37 80%, transparent 0),radial-gradient(circle, #490c37 76.75%, transparent 0),radial-gradient(circle, #490c37 73.5%, transparent 0),radial-gradient(circle, #490c37 70.25%, transparent 0),radial-gradient(circle, #490c37 67%, transparent 0),radial-gradient(circle, #490c37 63.75%, transparent 0),radial-gradient(circle, #490c37 60.5%, transparent 0),radial-gradient(circle, #490c37 57.25%, transparent 0),radial-gradient(circle, #490c37 54%, transparent 0),radial-gradient(circle, #490c37 50.75%, transparent 0),radial-gradient(circle, #490c37 47.5%, transparent 0),radial-gradient(circle, #490c37 44.25%, transparent 0),radial-gradient(circle, #490c37 41%, transparent 0),radial-gradient(circle, #490c37 37.75%, transparent 0),radial-gradient(circle, #490c37 34.5%, transparent 0),radial-gradient(circle, #490c37 31.25%, transparent 0),radial-gradient(circle, #490c37 28%, transparent 0),radial-gradient(circle, #490c37 24.75%, transparent 0),radial-gradient(circle, #490c37 21.5%, transparent 0),radial-gradient(circle, #490c37 18.25%, transparent 0),radial-gradient(circle, #490c37 15%, transparent 0);
+  background-size: 5vw 5vw;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transform: translate(-50% -50%) rotate(30deg);
+  z-index: -100;
+}
+@media (min-width: 33em) {
+  .bg {
+    background-position: 0vw 0vh,2.5vw 1.7vh,5vw 3.4vh,7.5vw 5.1vh,10vw 6.8vh,12.5vw 8.5vh,15vw 10.2vh,17.5vw 11.9vh,20vw 13.6vh,22.5vw 15.3vh,25vw 17vh,27.5vw 18.7vh,30vw 20.4vh,32.5vw 22.1vh,35vw 23.8vh,37.5vw 25.5vh,40vw 27.2vh,42.5vw 28.9vh,45vw 30.6vh,47.5vw 32.3vh,50vw 34vh,52.5vw 35.7vh,55vw 37.4vh,57.5vw 39.1vh,60vw 40.8vh,62.5vw 42.5vh,65vw 44.2vh,67.5vw 45.9vh,70vw 47.6vh,72.5vw 49.3vh,75vw 51vh,77.5vw 52.7vh,80vw 54.4vh,82.5vw 56.1vh,85vw 57.8vh,87.5vw 59.5vh,90vw 61.2vh,92.5vw 62.9vh,95vw 64.6vh,97.5vw 66.3vh,100vw 68vh;
+    background-image: radial-gradient(circle, #490c37 80%, transparent 0),radial-gradient(circle, #490c37 78.2%, transparent 0),radial-gradient(circle, #490c37 76.4%, transparent 0),radial-gradient(circle, #490c37 74.6%, transparent 0),radial-gradient(circle, #490c37 72.8%, transparent 0),radial-gradient(circle, #490c37 71%, transparent 0),radial-gradient(circle, #490c37 69.2%, transparent 0),radial-gradient(circle, #490c37 67.4%, transparent 0),radial-gradient(circle, #490c37 65.6%, transparent 0),radial-gradient(circle, #490c37 63.8%, transparent 0),radial-gradient(circle, #490c37 62%, transparent 0),radial-gradient(circle, #490c37 60.2%, transparent 0),radial-gradient(circle, #490c37 58.4%, transparent 0),radial-gradient(circle, #490c37 56.6%, transparent 0),radial-gradient(circle, #490c37 54.8%, transparent 0),radial-gradient(circle, #490c37 53%, transparent 0),radial-gradient(circle, #490c37 51.2%, transparent 0),radial-gradient(circle, #490c37 49.4%, transparent 0),radial-gradient(circle, #490c37 47.6%, transparent 0),radial-gradient(circle, #490c37 45.8%, transparent 0),radial-gradient(circle, #490c37 44%, transparent 0),radial-gradient(circle, #490c37 42.2%, transparent 0),radial-gradient(circle, #490c37 40.4%, transparent 0),radial-gradient(circle, #490c37 38.6%, transparent 0),radial-gradient(circle, #490c37 36.8%, transparent 0),radial-gradient(circle, #490c37 35%, transparent 0),radial-gradient(circle, #490c37 33.2%, transparent 0),radial-gradient(circle, #490c37 31.4%, transparent 0),radial-gradient(circle, #490c37 29.6%, transparent 0),radial-gradient(circle, #490c37 27.8%, transparent 0),radial-gradient(circle, #490c37 26%, transparent 0),radial-gradient(circle, #490c37 24.2%, transparent 0),radial-gradient(circle, #490c37 22.4%, transparent 0),radial-gradient(circle, #490c37 20.6%, transparent 0),radial-gradient(circle, #490c37 18.8%, transparent 0),radial-gradient(circle, #490c37 17%, transparent 0),radial-gradient(circle, #490c37 15.2%, transparent 0),radial-gradient(circle, #490c37 13.4%, transparent 0),radial-gradient(circle, #490c37 11.6%, transparent 0),radial-gradient(circle, #490c37 9.8%, transparent 0),radial-gradient(circle, #490c37 8%, transparent 0);
+    background-size: 2.5vw 2.5vw;
+  }
+}
+@media (min-width: 66em) {
+  .bg {
+    background-position: 0vw 0vh,1.4285714286vw 1.7vh,2.8571428571vw 3.4vh,4.2857142857vw 5.1vh,5.7142857143vw 6.8vh,7.1428571429vw 8.5vh,8.5714285714vw 10.2vh,10vw 11.9vh,11.4285714286vw 13.6vh,12.8571428571vw 15.3vh,14.2857142857vw 17vh,15.7142857143vw 18.7vh,17.1428571429vw 20.4vh,18.5714285714vw 22.1vh,20vw 23.8vh,21.4285714286vw 25.5vh,22.8571428571vw 27.2vh,24.2857142857vw 28.9vh,25.7142857143vw 30.6vh,27.1428571429vw 32.3vh,28.5714285714vw 34vh,30vw 35.7vh,31.4285714286vw 37.4vh,32.8571428571vw 39.1vh,34.2857142857vw 40.8vh,35.7142857143vw 42.5vh,37.1428571429vw 44.2vh,38.5714285714vw 45.9vh,40vw 47.6vh,41.4285714286vw 49.3vh,42.8571428571vw 51vh,44.2857142857vw 52.7vh,45.7142857143vw 54.4vh,47.1428571429vw 56.1vh,48.5714285714vw 57.8vh,50vw 59.5vh,51.4285714286vw 61.2vh,52.8571428571vw 62.9vh,54.2857142857vw 64.6vh,55.7142857143vw 66.3vh,57.1428571429vw 68vh,58.5714285714vw 69.7vh,60vw 71.4vh,61.4285714286vw 73.1vh,62.8571428571vw 74.8vh,64.2857142857vw 76.5vh,65.7142857143vw 78.2vh,67.1428571429vw 79.9vh,68.5714285714vw 81.6vh,70vw 83.3vh,71.4285714286vw 85vh,72.8571428571vw 86.7vh,74.2857142857vw 88.4vh,75.7142857143vw 90.1vh,77.1428571429vw 91.8vh,78.5714285714vw 93.5vh,80vw 95.2vh,81.4285714286vw 96.9vh,82.8571428571vw 98.6vh,84.2857142857vw 100.3vh,85.7142857143vw 102vh,87.1428571429vw 103.7vh,88.5714285714vw 105.4vh,90vw 107.1vh,91.4285714286vw 108.8vh,92.8571428571vw 110.5vh,94.2857142857vw 112.2vh,95.7142857143vw 113.9vh,97.1428571429vw 115.6vh,98.5714285714vw 117.3vh,100vw 119vh;
+    background-image: radial-gradient(circle, #490c37 80%, transparent 0),radial-gradient(circle, #490c37 78.9428571429%, transparent 0),radial-gradient(circle, #490c37 77.8857142857%, transparent 0),radial-gradient(circle, #490c37 76.8285714286%, transparent 0),radial-gradient(circle, #490c37 75.7714285714%, transparent 0),radial-gradient(circle, #490c37 74.7142857143%, transparent 0),radial-gradient(circle, #490c37 73.6571428571%, transparent 0),radial-gradient(circle, #490c37 72.6%, transparent 0),radial-gradient(circle, #490c37 71.5428571429%, transparent 0),radial-gradient(circle, #490c37 70.4857142857%, transparent 0),radial-gradient(circle, #490c37 69.4285714286%, transparent 0),radial-gradient(circle, #490c37 68.3714285714%, transparent 0),radial-gradient(circle, #490c37 67.3142857143%, transparent 0),radial-gradient(circle, #490c37 66.2571428571%, transparent 0),radial-gradient(circle, #490c37 65.2%, transparent 0),radial-gradient(circle, #490c37 64.1428571429%, transparent 0),radial-gradient(circle, #490c37 63.0857142857%, transparent 0),radial-gradient(circle, #490c37 62.0285714286%, transparent 0),radial-gradient(circle, #490c37 60.9714285714%, transparent 0),radial-gradient(circle, #490c37 59.9142857143%, transparent 0),radial-gradient(circle, #490c37 58.8571428571%, transparent 0),radial-gradient(circle, #490c37 57.8%, transparent 0),radial-gradient(circle, #490c37 56.7428571429%, transparent 0),radial-gradient(circle, #490c37 55.6857142857%, transparent 0),radial-gradient(circle, #490c37 54.6285714286%, transparent 0),radial-gradient(circle, #490c37 53.5714285714%, transparent 0),radial-gradient(circle, #490c37 52.5142857143%, transparent 0),radial-gradient(circle, #490c37 51.4571428571%, transparent 0),radial-gradient(circle, #490c37 50.4%, transparent 0),radial-gradient(circle, #490c37 49.3428571429%, transparent 0),radial-gradient(circle, #490c37 48.2857142857%, transparent 0),radial-gradient(circle, #490c37 47.2285714286%, transparent 0),radial-gradient(circle, #490c37 46.1714285714%, transparent 0),radial-gradient(circle, #490c37 45.1142857143%, transparent 0),radial-gradient(circle, #490c37 44.0571428571%, transparent 0),radial-gradient(circle, #490c37 43%, transparent 0),radial-gradient(circle, #490c37 41.9428571429%, transparent 0),radial-gradient(circle, #490c37 40.8857142857%, transparent 0),radial-gradient(circle, #490c37 39.8285714286%, transparent 0),radial-gradient(circle, #490c37 38.7714285714%, transparent 0),radial-gradient(circle, #490c37 37.7142857143%, transparent 0),radial-gradient(circle, #490c37 36.6571428571%, transparent 0),radial-gradient(circle, #490c37 35.6%, transparent 0),radial-gradient(circle, #490c37 34.5428571429%, transparent 0),radial-gradient(circle, #490c37 33.4857142857%, transparent 0),radial-gradient(circle, #490c37 32.4285714286%, transparent 0),radial-gradient(circle, #490c37 31.3714285714%, transparent 0),radial-gradient(circle, #490c37 30.3142857143%, transparent 0),radial-gradient(circle, #490c37 29.2571428571%, transparent 0),radial-gradient(circle, #490c37 28.2%, transparent 0),radial-gradient(circle, #490c37 27.1428571429%, transparent 0),radial-gradient(circle, #490c37 26.0857142857%, transparent 0),radial-gradient(circle, #490c37 25.0285714286%, transparent 0),radial-gradient(circle, #490c37 23.9714285714%, transparent 0),radial-gradient(circle, #490c37 22.9142857143%, transparent 0),radial-gradient(circle, #490c37 21.8571428571%, transparent 0),radial-gradient(circle, #490c37 20.8%, transparent 0),radial-gradient(circle, #490c37 19.7428571429%, transparent 0),radial-gradient(circle, #490c37 18.6857142857%, transparent 0),radial-gradient(circle, #490c37 17.6285714286%, transparent 0),radial-gradient(circle, #490c37 16.5714285714%, transparent 0),radial-gradient(circle, #490c37 15.5142857143%, transparent 0),radial-gradient(circle, #490c37 14.4571428571%, transparent 0),radial-gradient(circle, #490c37 13.4%, transparent 0),radial-gradient(circle, #490c37 12.3428571429%, transparent 0),radial-gradient(circle, #490c37 11.2857142857%, transparent 0),radial-gradient(circle, #490c37 10.2285714286%, transparent 0),radial-gradient(circle, #490c37 9.1714285714%, transparent 0),radial-gradient(circle, #490c37 8.1142857143%, transparent 0),radial-gradient(circle, #490c37 7.0571428571%, transparent 0),radial-gradient(circle, #490c37 6%, transparent 0);
+    background-size: 1.4285714286vw 1.4285714286vw;
+  }
+}
+
+h1 {
+  font-family: "Fira Sans", sans-serif;
+  color: gainsboro;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-size: calc(4em + 5vmax);
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  -webkit-text-stroke: 0.02em #1f0f34;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-font-smoothing: antialiased;
+}
+
+.dotfx::before {
+  content: ".";
+  color: #f30042;
+  font-style: normal;
+  letter-spacing: -1em;
+}
+
+.section1 {
+  height: 100vh;
+}
+
+.section2 {
+  height: 50vh;
+  text-align: center;
+  padding-left: 4.2vw;
+}
+
+.icon {
+  filter: grayscale(1) invert(0.9);
+  width: 6.5vmax;
+  vertical-align: middle;
+}
+
+#gh {
+  padding-right: 4vmax;
+  padding-left: 1vmax;
+}
+
+#ds {
+  padding-left: 4vmax;
+  width: 7.77vmax;
+}
+
+.un {
+  font-family: "Fira Sans", sans-serif;
+  color: gainsboro;
+  font-style: italic;
+  font-weight: 1;
+  font-size: 2vmax;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
