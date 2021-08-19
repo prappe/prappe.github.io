@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:700,700italic')
+
+$COMMA: ','
+$EMPTY_STRING: ''
+
+$purple: #1f0f34
+$pink: #f30042
+$almostBlack: #111111
+$sand: mix($purple, $pink, 80%)
+
+html
+	overflow: auto
+	&::-webkit-scrollbar
+		width: 0.4vmax
+	&::-webkit-scrollbar-track
+		background-color: $almostBlack
+	&::-webkit-scrollbar-thumb
+		border-radius: 0.4vmax
+		background: $sand
+
+// Dots-technique taken from https://codepen.io/carpenumidium/pen/qtnfJ
+// See halftone-license.md for license and credit
+=dots($amount, $start-size, $end-size)
+	$dots: $EMPTY_STRING
+	$sizes: $EMPTY_STRING
+	$dot-size: percentage(1 / $amount)
+	$step-size: ($start-size - $end-size) / $amount
+	$bg-size: 100vw / $amount
+
+	@for $step from 0 through $amount
+		$size: $start-size - ($step-size * $step)
+		$dots: $dots + 'radial-gradient(circle, #{$sand} #{$size}, transparent 0)'
+		$sizes: '#{$sizes + ($step * $dot-size / 1% * 1vw)} #{$step * 1.7vh}'
+
+		// Add a comma between the sizes or circles, unless we're in the last loop
+		@if $step != $amount
+			$dots: $dots + $COMMA
+			$sizes: $sizes + $COMMA
+
+	background-position: unquote($sizes)
+	background-image: unquote($dots)
+	background-size: $bg-size $bg-size
+
+
+
+.bg
+	width: 300vw
+	height: 300vh
+	background-color: $purple
+	background-repeat: repeat-y
+	+dots(20, 80%, 15%)
+	@media (min-width: 33em)
+		+dots(40, 80%, 8%)
+	@media (min-width: 66em)
+		+dots(70, 80%, 6%)
+	position: fixed
+	overflow-x: hidden
+	overflow-y: scroll
+	transform: translate(-50% -50%) rotate(30deg)
+	z-index: -100
+
+	
+h1
+	font-family: 'Fira Sans', sans-serif
+	color: gainsboro
+	font-style: italic
+	font-weight: 700
+	text-transform: lowercase
+	font-size: calc(4em + 5vmax)
+	white-space: nowrap
+	letter-spacing: -0.02em
+	//text-shadow: 0.04em 0.04em 0 $purple, -0.04em 0.04em $purple, 0.04em -0.04em $purple, -0.04em -0.04em $purple
+	-webkit-text-stroke: 0.02em $purple
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	-webkit-font-smoothing: antialiased
+
+.dotfx
+	&::before
+		content: '.'
+		color: $pink
+		font-style: normal
+		letter-spacing: -1em
+
+.section1
+	height: 100vh
+
+.section2
+	height: 50vh
+	text-align: center
+	padding-left: 4.2vw
+
+.icon
+	filter: grayscale(1) invert(0.9)
+	width: 6.5vmax
+	vertical-align: middle
+
+#gh
+	padding-right: 4vmax
+	padding-left: 1vmax
+
+#ds
+	padding-left: 4vmax
+	width: 7.77vmax
+
+.un
+	font-family: 'Fira Sans', sans-serif
+	color: gainsboro
+	font-style: italic
+	font-weight: 1
+	font-size: 2vmax
+	white-space: nowrap
+	letter-spacing: -0.02em
+	opacity: 0
+	transition: all 0.5s ease

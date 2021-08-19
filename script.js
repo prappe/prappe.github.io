@@ -15,7 +15,11 @@ const mix=(m,i,x)=>{let j=(d)=>{return d.toString(16)};let k=(h)=>{return parseI
 
 const store = () => {
 	document.documentElement.dataset.scroll = window.scrollY
-	document.getElementById('bg1').style.backgroundColor = mix(almostBlack, purple, window.scrollY / window.innerHeight * 222)
+	let bgnamecolor = mix(almostBlack, purple, window.scrollY / window.innerHeight * 222)
+	document.getElementById('bg1').style.backgroundColor = bgnamecolor
+	// document.getElementById("name").style["-webkit-text-stroke"] = "0.02em " + mix(pink, purple, window.scrollY / window.innerHeight * 222)
+	document.getElementById("name").style["-webkit-text-stroke"] = "0.02em " + bgnamecolor
+	// document.getElementById("name").style.color = bgnamecolor
 }
 document.addEventListener("scroll", debounce(store), {passive: true})
 store()
